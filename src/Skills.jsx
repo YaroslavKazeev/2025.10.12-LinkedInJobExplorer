@@ -1,10 +1,18 @@
 export default function Skills({ item }) {
   const skills = JSON.parse(import.meta.env.VITE_MY_SKILLS);
 
+  function normalizeForWordSearch(str) {
+    // add a space at start/end, replace punctuation with space, collapse multiple spaces
+    return (" " + str + " ")
+      .replace(/[.*+?^${}()|[\]\\]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
   function getSkillsInDescription(text) {
-    const textSpaced = text.replace(/[.*+?^${}()|[\]\\]/g, " ");
+    const textSpaced = normalizeForWordSearch(text);
     return skills.filter((skill) => {
-      const re = new RegExp(skill, "i");
+      const re = new RegExp(" " + skill + " ", "i");
       return re.test(textSpaced);
     });
   }
