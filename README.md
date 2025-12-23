@@ -1,8 +1,6 @@
 # LinkedIn Job Explorer 🔍
 
-Discover and explore LinkedIn job postings across different provinces in the Netherlands. Built with React, Vite, and React Router.
-
-Built with React, Vite, and React Router. This project demonstrates modern React 19 patterns, routing, and clean component structure for filtering and viewing job details.
+Discover and explore LinkedIn job postings across different provinces in the Netherlands. Built with React, Vite, and React Router. This project demonstrates modern React 19 patterns, routing, and clean component structure for filtering and viewing job details.
 
 ## 📋 Features
 
